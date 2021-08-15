@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: ChoosePlans
+      MYSQL_ROOT_PASSWORD: e1ZyC7k1lN0Z
+
+  chooseplan:
+    image: chooseplan-image:master
+    container_name: chooseplan
+    depends_on:
+      - mysql

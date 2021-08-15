@@ -1,0 +1,16 @@
+[
+  {
+    "type": "mysql",
+    "host": "mysql",
+    "port": "3306",
+    "username": "root",
+    "password": "e1ZyC7k1lN0Z",
+    "database": "ChoosePlans",
+    "retryAttempts": "3",
+    "entities": ["dist/Database/entities/*.entity{.ts,.js}"],
+    "synchronize": "false",
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrationsTableName": "migrations_typeorm",
+    "migrationsRun": false
+  }
+]
