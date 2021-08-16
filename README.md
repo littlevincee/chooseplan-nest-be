@@ -45,3 +45,7 @@ $ yarn test:e2e
 # test coverage
 $ yarn test:cov
 ```
+
+## Swagger
+
+Swagger is enabled which can be accessed by `localhost:80/api`
